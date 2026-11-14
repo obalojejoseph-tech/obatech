@@ -59,15 +59,19 @@ header {
 }
 
 .logo {
-    color: var(--white);
-    font-size: clamp(1.35rem, 2vw, 1.9rem);
-    font-weight: 800;
-    letter-spacing: 0.02em;
+    display: inline-flex;
+    align-items: center;
 }
 
-.logo span,
-footer span {
-    color: var(--blue-soft);
+.logo img {
+    width: 188px;
+    height: auto;
+}
+
+.footer-logo {
+    width: 188px;
+    height: auto;
+    margin: 0 auto 0.6rem;
 }
 
 .nav-links {
@@ -214,7 +218,8 @@ footer span {
 
 .about,
 .process,
-.contact {
+.contact,
+.pricing {
     padding: 5.8rem 0;
 }
 
@@ -237,7 +242,8 @@ footer span {
 .about-content h2,
 .services h2,
 .process h2,
-.contact h2 {
+.contact h2,
+.pricing h2 {
     font-size: clamp(2rem, 3vw, 3rem);
     line-height: 1.2;
     margin-bottom: 1rem;
@@ -309,6 +315,94 @@ footer span {
 .service-btn {
     color: var(--blue);
     font-weight: 700;
+}
+
+.pricing {
+    text-align: center;
+    background: var(--white);
+}
+
+.pricing-container {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.5rem;
+    max-width: 900px;
+    margin: 2.5rem auto 1rem;
+    text-align: left;
+}
+
+.pricing-card {
+    position: relative;
+    padding: 2rem;
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    background: var(--white);
+    box-shadow: 0 14px 40px rgba(8, 26, 53, 0.07);
+}
+
+.pricing-card.featured {
+    border: 2px solid var(--blue);
+    box-shadow: 0 18px 45px rgba(40, 120, 255, 0.13);
+}
+
+.pricing-label {
+    color: var(--blue);
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 0.08rem;
+    margin-bottom: 0.7rem;
+}
+
+.pricing-card h3 {
+    color: var(--navy);
+    font-size: 1.7rem;
+    margin-bottom: 0.7rem;
+}
+
+.pricing-description {
+    color: var(--muted);
+    min-height: 5rem;
+}
+
+.pricing-card ul {
+    list-style: none;
+    margin: 1.3rem 0 1.7rem;
+}
+
+.pricing-card li {
+    color: var(--text);
+    padding: 0.45rem 0 0.45rem 1.7rem;
+    position: relative;
+}
+
+.pricing-card li::before {
+    content: "✓";
+    color: #139b62;
+    font-weight: 800;
+    position: absolute;
+    left: 0;
+}
+
+.pricing-btn {
+    width: 100%;
+}
+
+.popular-badge {
+    position: absolute;
+    top: -13px;
+    right: 1.2rem;
+    color: var(--white);
+    background: var(--blue);
+    border-radius: 999px;
+    padding: 0.3rem 0.8rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+.pricing-note {
+    color: var(--muted);
+    font-size: 0.9rem;
 }
 
 .process-container {
@@ -412,10 +506,25 @@ form textarea {
     resize: vertical;
 }
 
-form button {
+.contact-actions {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.8rem;
+}
+
+.contact-actions button {
     width: 100%;
     border: none;
     cursor: pointer;
+}
+
+.email-btn {
+    background: var(--navy);
+    box-shadow: none;
+}
+
+.email-btn:hover {
+    background: var(--navy-soft);
 }
 
 .form-note {
@@ -433,11 +542,6 @@ footer {
 
 .footer-inner {
     text-align: center;
-}
-
-footer h3 {
-    font-size: 1.9rem;
-    margin-bottom: 0.6rem;
 }
 
 footer p {
@@ -489,7 +593,8 @@ footer p {
         padding-top: 4rem;
     }
 
-    .service-container {
+    .service-container,
+    .pricing-container {
         grid-template-columns: 1fr;
     }
 
@@ -512,7 +617,11 @@ footer p {
         align-items: stretch;
     }
 
-    .btn {
+    .hero-actions .btn {
         width: 100%;
+    }
+
+    .contact-actions {
+        grid-template-columns: 1fr;
     }
 }

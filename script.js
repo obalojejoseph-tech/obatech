@@ -6,6 +6,7 @@ if (menuToggle && navLinks) {
         const isOpen = navLinks.classList.toggle("open");
         menuToggle.textContent = isOpen ? "×" : "☰";
         menuToggle.setAttribute("aria-expanded", String(isOpen));
+        menuToggle.setAttribute("aria-label", isOpen ? "Close menu" : "Open menu");
     });
 
     document.querySelectorAll("#navLinks a").forEach(function(link) {
@@ -13,13 +14,13 @@ if (menuToggle && navLinks) {
             navLinks.classList.remove("open");
             menuToggle.textContent = "☰";
             menuToggle.setAttribute("aria-expanded", "false");
+            menuToggle.setAttribute("aria-label", "Open menu");
         });
     });
 }
 
-// Select a service automatically
-const serviceLinks = document.querySelectorAll("[data-service]");
-serviceLinks.forEach(function(link) {
+// Select a service automatically from service or pricing links.
+document.querySelectorAll("[data-service]").forEach(function(link) {
     link.addEventListener("click", function() {
         const serviceField = document.getElementById("service");
         if (serviceField) {
@@ -28,7 +29,7 @@ serviceLinks.forEach(function(link) {
     });
 });
 
-// Contact form using email
+// Let visitors choose whether to send their enquiry through WhatsApp or email.
 const contactForm = document.getElementById("contactForm");
 
 if (contactForm) {
@@ -39,27 +40,35 @@ if (contactForm) {
         const email = document.getElementById("email").value.trim();
         const service = document.getElementById("service").value;
         const message = document.getElementById("message").value.trim();
+        const formNote = document.getElementById("formNote");
+        const sendVia = event.submitter ? event.submitter.value : "whatsapp";
 
         if (!name || !email || !service || !message) {
-            document.getElementById("formNote").textContent = "Please fill in all fields before sending your enquiry.";
+            formNote.textContent = "Please fill in all fields before sending your enquiry.";
             return;
         }
 
-        const subject = encodeURIComponent(`Project Enquiry - ${service}`);
-        const body = encodeURIComponent(
-            `Hello OBA'S TECH,\n\n` +
-            `Name: ${name}\n` +
-            `Email: ${email}\n` +
-            `Service: ${service}\n\n` +
-            `Project Details:\n${message}`
-        );
+        const enquiry =
+            `Hello OBA'S TECH!\n\n` +
+            `My name is ${name}.\n` +
+            `My email is ${email}.\n` +
+            `Service needed: ${service}.\n\n` +
+            `Project details:\n${message}`;
 
-        const mailtoLink = `mailto:hello@obatech.com.ng?subject=${subject}&body=${body}`;
+        if (sendVia === "email") {
+            const subject = encodeURIComponent(`Project enquiry - ${service}`);
+            const body = encodeURIComponent(enquiry);
+            formNote.textContent = "Opening your email app. Review the enquiry and press Send.";
+            window.location.href = `mailto:hello@obatech.com.ng?subject=${subject}&body=${body}`;
+            return;
+        }
 
-        document.getElementById("formNote").textContent =
-            "Your email app is opening. Please review the message and send it.";
+        const whatsappURL =
+            "https://wa.me/2347074080425?text=" +
+            encodeURIComponent(enquiry);
 
-        window.location.href = mailtoLink;
+        formNote.textContent = "Opening WhatsApp. Review the enquiry and press Send.";
+        window.open(whatsappURL, "_blank", "noopener,noreferrer");
     });
 }
 
