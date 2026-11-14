@@ -1,0 +1,410 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #14233a;
+    line-height: 1.6;
+}
+
+:root {
+    --navy: #081a35;
+    --blue: #2878ff;
+    --white: #ffffff;
+}
+
+header {
+    background: var(--navy);
+    padding: 20px 7%;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.logo span,
+footer span {
+    color: #68cfff;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #68cfff;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 27px;
+    cursor: pointer;
+}
+
+.hero {
+    background: linear-gradient(120deg, #081a35, #163e70);
+    color: white;
+    min-height: 570px;
+    padding: 80px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.hero-content {
+    max-width: 520px;
+}
+
+.tagline {
+    color: #68cfff;
+    font-size: 12px;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.hero h1 span {
+    color: #68cfff;
+}
+
+.hero-content > p:not(.tagline) {
+    color: #d0dceb;
+    margin-bottom: 30px;
+}
+
+.hero-image {
+    width: 48%;
+}
+
+.hero-image img {
+    width: 100%;
+    border-radius: 12px;
+}
+
+.btn {
+    display: inline-block;
+    background: var(--blue);
+    color: white;
+    padding: 14px 25px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #1359c8;
+    transform: translateY(-3px);
+}
+
+.about {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    padding: 90px 7%;
+}
+
+.about-image,
+.about-content {
+    width: 50%;
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.about-content h2,
+.services h2,
+.process h2,
+.contact h2 {
+    font-size: 35px;
+    margin-bottom: 20px;
+    color: var(--navy);
+}
+
+.about-content h2 span {
+    color: var(--blue);
+}
+
+.about-content p {
+    margin-bottom: 18px;
+    color: #65758b;
+}
+
+.services {
+    padding: 85px 7%;
+    background: #f3f7fc;
+    text-align: center;
+}
+
+.section-description {
+    color: #65758b;
+    margin-bottom: 35px;
+}
+
+.service-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.service-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+    transition: 0.3s;
+    text-align: left;
+}
+
+.service-card:hover {
+    transform: translateY(-7px);
+}
+
+.service-card img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    border-radius: 7px;
+}
+
+.service-card h3 {
+    margin: 15px 0 10px;
+    color: var(--navy);
+}
+
+.service-card p {
+    color: #65758b;
+    margin-bottom: 18px;
+}
+
+.service-btn {
+    color: var(--blue);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.process {
+    padding: 85px 7%;
+    text-align: center;
+}
+
+.process-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-top: 35px;
+}
+
+.process-card {
+    background: #f3f7fc;
+    padding: 25px 15px;
+    border-radius: 8px;
+}
+
+.process-card h3 {
+    color: var(--blue);
+    margin-bottom: 10px;
+}
+
+.process-card p {
+    color: #65758b;
+    font-size: 14px;
+}
+
+.contact {
+    background: #f3f7fc;
+    padding: 80px 7%;
+    text-align: center;
+}
+
+.contact-details {
+    margin: 20px 0;
+}
+
+.contact-details p {
+    margin: 10px;
+}
+
+.contact-details a {
+    color: var(--blue);
+    text-decoration: none;
+}
+
+.contact-details a:hover {
+    text-decoration: underline;
+}
+
+form {
+    max-width: 550px;
+    margin: 30px auto 0;
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+form input,
+form select,
+form textarea {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #dce4ee;
+    border-radius: 5px;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+}
+
+form textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+form button {
+    width: 100%;
+}
+
+.form-note {
+    margin-top: 12px;
+    font-size: 13px;
+    color: #65758b;
+}
+
+footer {
+    background: var(--navy);
+    color: white;
+    text-align: center;
+    padding: 35px 15px;
+}
+
+footer h3 {
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+footer p {
+    margin: 8px;
+    font-size: 13px;
+    color: #b9c9dc;
+}
+
+.whatsapp {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    background: #20bf73;
+    color: white;
+    padding: 13px 18px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    z-index: 50;
+}
+
+/* Mobile design */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: var(--navy);
+        padding: 25px;
+        gap: 20px;
+    }
+
+    .nav-links.open {
+        display: flex;
+    }
+
+    .hero {
+        flex-direction: column;
+        padding: 60px 7%;
+    }
+
+    .hero h1 {
+        font-size: 37px;
+    }
+
+    .hero-image {
+        width: 100%;
+    }
+
+    .about {
+        flex-direction: column;
+        padding: 60px 7%;
+    }
+
+    .about-image,
+    .about-content {
+        width: 100%;
+    }
+
+    .service-container {
+        grid-template-columns: 1fr;
+    }
+
+    .process-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 420px) {
+    .process-container {
+        grid-template-columns: 1fr;
+    }
+
+    .about-content h2,
+    .services h2,
+    .process h2,
+    .contact h2 {
+        font-size: 29px;
+    }
+}
