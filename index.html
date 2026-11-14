@@ -3,175 +3,199 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="OBA'S TECH offers professional website and software development services.">
+    <meta name="description" content="OBA'S TECH delivers professional websites, custom software, and digital solutions for growing businesses.">
     <title>OBA'S TECH | Digital Solutions</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <header>
-        <nav class="navbar">
+        <nav class="navbar container">
             <a href="#home" class="logo">OBA'S <span>TECH</span></a>
 
-            <button class="menu-toggle" id="menuToggle" aria-label="Open menu">☰</button>
+            <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false">☰</button>
 
             <ul class="nav-links" id="navLinks">
                 <li><a href="#home">Home</a></li>
-                <li><a href="#about">About Us</a></li>
+                <li><a href="#about">About</a></li>
                 <li><a href="#services">Services</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <section class="hero" id="home">
-        <div class="hero-content">
-            <p class="tagline">TECHNOLOGY THAT MOVES YOU FORWARD</p>
-            <h1>We Turn Bold Ideas Into <span>Digital Reality.</span></h1>
-            <p>
-                We build modern websites and custom software
-                that help businesses grow and succeed.
-            </p>
-            <a href="#contact" class="btn">Start a Project ↗</a>
-        </div>
+    <main>
+        <section class="hero" id="home">
+            <div class="container hero-inner">
+                <div class="hero-content">
+                    <p class="tagline">TECHNOLOGY THAT MOVES YOU FORWARD</p>
+                    <h1>We Turn Bold Ideas Into <span>Digital Reality.</span></h1>
+                    <p>
+                        We create modern websites and custom digital solutions that help businesses
+                        stand out, attract customers, and grow with confidence.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="#contact" class="btn">Start a Project ↗</a>
+                        <a href="https://wa.me/2347074080425" class="btn btn-secondary" target="_blank" rel="noopener">WhatsApp Us</a>
+                    </div>
+                    <div class="stats">
+                        <div>
+                            <strong>100%</strong>
+                            <span>Client-focused</span>
+                        </div>
+                        <div>
+                            <strong>Fast</strong>
+                            <span>Delivery</span>
+                        </div>
+                        <div>
+                            <strong>Modern</strong>
+                            <span>Solutions</span>
+                        </div>
+                    </div>
+                </div>
 
-        <div class="hero-image">
-            <img
-                src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1000&q=85"
-                alt="Website developer working on a computer">
-        </div>
-    </section>
+                <div class="hero-image">
+                    <img
+                        src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1000&q=85"
+                        alt="Website developer working on a computer">
+                </div>
+            </div>
+        </section>
 
-    <section class="about" id="about">
-        <div class="about-image">
-            <img
-                src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1000&q=85"
-                alt="Technology team collaborating">
-        </div>
+        <section class="about" id="about">
+            <div class="container about-inner">
+                <div class="about-image">
+                    <img
+                        src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1000&q=85"
+                        alt="Technology team collaborating">
+                </div>
 
-        <div class="about-content">
-            <h2>About <span>OBA'S TECH</span></h2>
-            <p>
-                OBA'S TECH is a technology startup focused on
-                website development and software development.
-            </p>
-            <p>
-                Our goal is to turn ideas into useful digital
-                solutions through innovation, creativity and technology.
-            </p>
-        </div>
-    </section>
+                <div class="about-content">
+                    <p class="section-tag">About OBA'S TECH</p>
+                    <h2>Smart digital solutions built for <span>real growth.</span></h2>
+                    <p>
+                        OBA'S TECH is a technology startup focused on website development, software development,
+                        and digital transformation for businesses that want to grow in a competitive market.
+                    </p>
+                    <p>
+                        We combine creativity, strategy, and technical expertise to transform ideas into powerful
+                        digital experiences that work beautifully and perform reliably.
+                    </p>
+                </div>
+            </div>
+        </section>
 
-    <section class="services" id="services">
-        <h2>Our Services</h2>
-        <p class="section-description">
-            We provide digital solutions to help your business grow.
-        </p>
-
-        <div class="service-container">
-
-            <div class="service-card">
-                <img
-                    src="https://images.unsplash.com/photo-1547658719-da2b51169166?auto=format&fit=crop&w=800&q=85"
-                    alt="Website design on a computer">
-                <h3>Website Development</h3>
-                <p>
-                    We create professional, attractive and
-                    mobile-friendly websites for businesses.
+        <section class="services" id="services">
+            <div class="container">
+                <p class="section-tag light">Our Services</p>
+                <h2>Everything you need to build a stronger digital presence.</h2>
+                <p class="section-description">
+                    We provide digital solutions tailored to help your business grow and stay ahead.
                 </p>
-                <a href="#contact" class="service-btn"
-                   data-service="Website development">Get Started →</a>
+
+                <div class="service-container">
+                    <div class="service-card">
+                        <img
+                            src="https://images.unsplash.com/photo-1547658719-da2b51169166?auto=format&fit=crop&w=800&q=85"
+                            alt="Website design on a computer">
+                        <h3>Website Development</h3>
+                        <p>
+                            We design and build professional, responsive, and conversion-focused websites that help businesses
+                            attract and retain customers.
+                        </p>
+                        <a href="#contact" class="service-btn" data-service="Website development">Get Started →</a>
+                    </div>
+
+                    <div class="service-card">
+                        <img
+                            src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=85"
+                            alt="Computer technology hardware">
+                        <h3>Software Development</h3>
+                        <p>
+                            We develop custom software and digital tools designed to streamline your operations, improve efficiency,
+                            and solve real business problems.
+                        </p>
+                        <a href="#contact" class="service-btn" data-service="Software development">Get Started →</a>
+                    </div>
+                </div>
             </div>
+        </section>
 
-            <div class="service-card">
-                <img
-                    src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=85"
-                    alt="Computer technology hardware">
-                <h3>Software Development</h3>
-                <p>
-                    We develop custom software and applications
-                    designed to solve business problems.
-                </p>
-                <a href="#contact" class="service-btn"
-                   data-service="Software development">Get Started →</a>
+        <section class="process">
+            <div class="container">
+                <p class="section-tag">How We Work</p>
+                <h2>A simple process that delivers results.</h2>
+
+                <div class="process-container">
+                    <div class="process-card">
+                        <span>01</span>
+                        <h3>Discover</h3>
+                        <p>We learn about your idea, goals, and what success means to you.</p>
+                    </div>
+
+                    <div class="process-card">
+                        <span>02</span>
+                        <h3>Plan</h3>
+                        <p>We shape the structure, strategy, and features around your business needs.</p>
+                    </div>
+
+                    <div class="process-card">
+                        <span>03</span>
+                        <h3>Develop</h3>
+                        <p>We build, test, and refine a solution that is reliable and user-friendly.</p>
+                    </div>
+
+                    <div class="process-card">
+                        <span>04</span>
+                        <h3>Launch</h3>
+                        <p>We deliver your digital product ready for growth and long-term impact.</p>
+                    </div>
+                </div>
             </div>
+        </section>
 
-        </div>
-    </section>
+        <section class="contact" id="contact">
+            <div class="container">
+                <p class="section-tag light">Contact Us</p>
+                <h2>Let’s build something exceptional together.</h2>
+                <p class="contact-intro">Have a project in mind? We’d love to hear about it.</p>
 
-    <section class="process">
-        <h2>How We Work</h2>
+                <div class="contact-details">
+                    <p><strong>Phone:</strong> <a href="tel:+2347074080425">07074080425</a></p>
+                    <p><strong>Email:</strong> <a href="mailto:hello@obatech.com.ng">hello@obatech.com.ng</a></p>
+                    <p><strong>Website:</strong> <a href="https://obatech.com.ng" target="_blank" rel="noopener noreferrer">obatech.com.ng</a></p>
+                    <p><strong>Address:</strong> 10, Link Road, Olowofela, Magboro, Ogun State.</p>
+                </div>
 
-        <div class="process-container">
-            <div class="process-card">
-                <h3>01. Discover</h3>
-                <p>We understand your idea and requirements.</p>
+                <form id="contactForm">
+                    <input type="text" id="name" placeholder="Your Name" required>
+                    <input type="email" id="email" placeholder="Your Email" required>
+                    <select id="service" required>
+                        <option value="">Select a Service</option>
+                        <option>Website development</option>
+                        <option>Software development</option>
+                    </select>
+                    <textarea id="message" placeholder="Tell us about your project" required></textarea>
+                    <button type="submit" class="btn">Send Enquiry</button>
+                </form>
+                <p id="formNote" class="form-note"></p>
             </div>
-
-            <div class="process-card">
-                <h3>02. Plan</h3>
-                <p>We plan the design and features of your project.</p>
-            </div>
-
-            <div class="process-card">
-                <h3>03. Develop</h3>
-                <p>We build and test your digital solution.</p>
-            </div>
-
-            <div class="process-card">
-                <h3>04. Launch</h3>
-                <p>We prepare your project for the world.</p>
-            </div>
-        </div>
-    </section>
-
-    <section class="contact" id="contact">
-        <h2>Contact OBA'S TECH</h2>
-        <p>Have a project in mind? Let's discuss it.</p>
-
-        <div class="contact-details">
-            <p><strong>Phone:</strong>
-                <a href="tel:+2347074080425">07074080425</a>
-            </p>
-            <p><strong>Website:</strong>
-                <a href="https://yourwebsite.com" target="_blank" rel="noopener noreferrer">
-                    Visit our website
-                </a>
-            </p>
-            <p><strong>Address:</strong>
-                10, Link Road, Olowofela, Magboro, Ogun State.
-            </p>
-        </div>
-
-        <form id="contactForm">
-            <input type="text" id="name" placeholder="Your Name" required>
-
-            <input type="email" id="email" placeholder="Your Email" required>
-
-            <select id="service" required>
-                <option value="">Select a Service</option>
-                <option>Website development</option>
-                <option>Software development</option>
-            </select>
-
-            <textarea id="message" placeholder="Tell us about your project" required></textarea>
-
-            <button type="submit" class="btn">Send Enquiry</button>
-        </form>
-        <p id="formNote" class="form-note"></p>
-    </section>
+        </section>
+    </main>
 
     <footer>
-        <h3>OBA'S <span>TECH</span></h3>
-        <p>Technology • Innovation • Digital Solutions</p>
-        <p>© <span id="year"></span> OBA'S TECH. All Rights Reserved.</p>
+        <div class="container footer-inner">
+            <h3>OBA'S <span>TECH</span></h3>
+            <p>Technology • Innovation • Digital Solutions</p>
+            <p>© <span id="year"></span> OBA'S TECH. All Rights Reserved.</p>
+        </div>
     </footer>
 
-    <a class="whatsapp" href="https://yourwebsite.com"
-       target="_blank" rel="noopener">Website</a>
+    <a class="whatsapp" href="https://wa.me/2347074080425" target="_blank" rel="noopener noreferrer">WhatsApp</a>
 
     <script src="script.js"></script>
 </body>
 </html>
-
-
