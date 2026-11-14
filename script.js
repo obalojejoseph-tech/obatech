@@ -72,6 +72,38 @@ if (contactForm) {
     });
 }
 
+// Animated stats / count-up effect
+const counters = document.querySelectorAll(".count-up");
+
+const animateCounter = (counter) => {
+    const target = Number(counter.dataset.target);
+    let current = 0;
+    const step = Math.max(1, Math.ceil(target / 60));
+
+    const update = () => {
+        current += step;
+        if (current >= target) {
+            counter.textContent = `${target}${target === 100 ? "%" : "+"}`;
+            return;
+        }
+        counter.textContent = `${current}${target === 100 ? "%" : "+"}`;
+        requestAnimationFrame(update);
+    };
+
+    requestAnimationFrame(update);
+};
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            animateCounter(entry.target);
+            observer.unobserve(entry.target);
+        }
+    });
+}, { threshold: 0.5 });
+
+counters.forEach((counter) => observer.observe(counter));
+
 // Automatic copyright year
 const yearElement = document.getElementById("year");
 if (yearElement) {

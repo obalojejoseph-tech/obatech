@@ -195,8 +195,9 @@ header {
 }
 
 .stats strong {
-    font-size: 1.4rem;
+    font-size: 1.7rem;
     color: var(--white);
+    font-weight: 800;
 }
 
 .stats span {
@@ -219,7 +220,8 @@ header {
 .about,
 .process,
 .contact,
-.pricing {
+.pricing,
+.testimonials {
     padding: 5.8rem 0;
 }
 
@@ -243,7 +245,8 @@ header {
 .services h2,
 .process h2,
 .contact h2,
-.pricing h2 {
+.pricing h2,
+.testimonials h2 {
     font-size: clamp(2rem, 3vw, 3rem);
     line-height: 1.2;
     margin-bottom: 1rem;
@@ -401,6 +404,52 @@ header {
 }
 
 .pricing-note {
+    color: var(--muted);
+    font-size: 0.9rem;
+}
+
+.testimonials {
+    background: var(--light);
+    text-align: center;
+}
+
+.testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.5rem;
+    margin-top: 2.2rem;
+}
+
+.testimonial-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    padding: 1.8rem 1.4rem;
+    text-align: left;
+    box-shadow: 0 14px 35px rgba(7, 22, 31, 0.05);
+}
+
+.stars {
+    color: #f6b700;
+    margin-bottom: 1rem;
+    letter-spacing: 0.12rem;
+}
+
+.testimonial-card p {
+    color: var(--muted);
+    margin-bottom: 1.3rem;
+}
+
+.person {
+    display: flex;
+    flex-direction: column;
+}
+
+.person strong {
+    color: var(--navy);
+}
+
+.person span {
     color: var(--muted);
     font-size: 0.9rem;
 }
@@ -594,7 +643,8 @@ footer p {
     }
 
     .service-container,
-    .pricing-container {
+    .pricing-container,
+    .testimonial-grid {
         grid-template-columns: 1fr;
     }
 
